@@ -133,24 +133,12 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"daily_transaction_summary.tasks.all"
-# 	],
-# 	"daily": [
-# 		"daily_transaction_summary.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"daily_transaction_summary.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"daily_transaction_summary.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"daily_transaction_summary.tasks.monthly"
-# 	],
-# }
-
+scheduler_events = {
+    "daily": [
+        "daily_transaction_summary.scheduler.daily_entry_summary_mail",
+        "daily_transaction_summary.scheduler.daily_transaction_summary_mail",
+    ]
+}
 # Testing
 # -------
 
